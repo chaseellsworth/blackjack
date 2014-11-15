@@ -1,3 +1,4 @@
+
 class window.Hand extends Backbone.Collection
   model: Card
 
@@ -5,6 +6,9 @@ class window.Hand extends Backbone.Collection
 
   hit: ->
     @add(@deck.pop())
+
+  stand: ->
+    @trigger 'stand', @
 
   hasAce: -> @reduce (memo, card) ->
     memo or card.get('value') is 1
