@@ -16,9 +16,14 @@ class window.App extends Backbone.Model
       @get(player).minScore()
 
   dealerStandOrHit: ->
+      if @get('dealerHand').first().get('revealed') is false
+        @get('dealerHand').first().flip()
+      self = @
       if @getCurrentScore('dealerHand') < 17
         @get('dealerHand').hit()
-        @dealerStandOrHit()
+        setTimeout (->
+          self.dealerStandOrHit()
+          ), 1300
       else
         @compareScores()
 

@@ -5,6 +5,7 @@
   border-radius: 5px;
   height: 140px;
   margin-right: 20px;
+  text-align: center;
 }
 
 .covered {
@@ -13,4 +14,24 @@
 
 .hand {
   overflow: auto;
+}
+
+.player-hand-container {
+  position: relative;
+  margin-top: 60px;
+
+}
+
+.dealer-hand-container {
+  position: relative;
+  margin-top: 60px;
+
+}
+.hit-button{
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.stand-button{
+  margin-top: 10px;
+  margin-right: 10px;
 }
