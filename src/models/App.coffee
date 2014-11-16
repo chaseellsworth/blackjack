@@ -12,6 +12,7 @@ class window.App extends Backbone.Model
     @set 'dealerHand', deck.dealDealer()
     (@get 'playerHand').on 'stand', => @dealerStandOrHit()
 
+
   getCurrentScore: (player) ->
       @get(player).minScore()
 
